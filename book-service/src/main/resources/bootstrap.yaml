@@ -1,6 +1,8 @@
 spring:
   application:
     name: book-service
+    index: ${random.uuid}
+
   cloud:
     config:
       uri:
