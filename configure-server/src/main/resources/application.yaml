@@ -4,8 +4,10 @@ spring:
       server:
         git:
           uri: https://github.com/PheaSoy/spring-cloud-config
-
-
+    bus:
+      trace:
+        enabled: true
+        
   rabbitmq:
     username: guest
     password: guest
