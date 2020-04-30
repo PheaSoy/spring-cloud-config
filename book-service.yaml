@@ -9,6 +9,6 @@ management:
     port: 5672
     host: localhost
 server:
-  port: 0
+  port: 8082
 
 tax: 100
