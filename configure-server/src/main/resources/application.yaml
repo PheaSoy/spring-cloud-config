@@ -7,7 +7,7 @@ spring:
     bus:
       trace:
         enabled: true
-        
+
   rabbitmq:
     username: guest
     password: guest
