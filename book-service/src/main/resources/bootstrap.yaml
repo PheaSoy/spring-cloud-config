@@ -2,7 +2,8 @@ spring:
   application:
     name: book-service
     index: ${random.uuid}
-
+  profiles: dev
+  
   cloud:
     config:
       uri:
