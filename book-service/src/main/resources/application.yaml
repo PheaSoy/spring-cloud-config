@@ -2,12 +2,7 @@ management:
   endpoints:
     web:
       exposure:
-        include:
-          - health
-          - info
-          - beans
-          - bus-refresh
-spring:
+        include: '*'
   rabbitmq:
     username: guest
     password: guest

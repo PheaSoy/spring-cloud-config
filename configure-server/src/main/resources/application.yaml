@@ -4,6 +4,8 @@ spring:
       server:
         git:
           uri: https://github.com/PheaSoy/spring-cloud-config
+
+
   rabbitmq:
     username: guest
     password: guest
@@ -11,3 +13,13 @@ spring:
     host: localhost
 server:
   port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - beans
+          - bus-refresh
