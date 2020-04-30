@@ -2,9 +2,6 @@ spring:
   application:
     name: book-service
     index: ${random.uuid}
-  profiles: dev
-  
   cloud:
     config:
-      uri:
-        -  http://localhost:8081
+      uri: http://localhost:8081
