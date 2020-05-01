@@ -1,0 +1,30 @@
+version: '3'
+services:
+    rabbitmq:
+      image: 'rabbitmq:3-management'
+      ports: 
+        - '15672:15672'
+        - '5672:5672'
+    configure-server:
+      build: configure-server/.
+      ports: 
+        - '8081:8081'
+      environment: 
+        SPRING_APPLICATION_JSON: '{
+          "spring.rabbitmq.host": "rabbitmq"
+        }'
+
+    book-service:
+      build: book-service/.
+      links:
+        - "configure-server:configure-server"
+      depends_on: 
+        - configure-server
+      ports: 
+        - '8082:8082'
+      environment: 
+        SPRING_APPLICATION_JSON: '{
+          "spring.rabbitmq.host": "rabbitmq",
+          "spring.cloud.config.uri":"http://configure-server:8081"
+        }'
+      command: bash -c "/usr/wait-for-it.sh --timeout=0 configure-server:8081 &&  java -jar book-service.jar"
