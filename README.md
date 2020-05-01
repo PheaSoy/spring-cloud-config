@@ -49,7 +49,7 @@ management:
 server:
   port: 8082
 
-tax: 50
+tax: 30
 ```
 * After we changed and commit - we need to call the configure-server and tell we need to refresh the configuration.
 
@@ -67,6 +67,6 @@ http http://localhost:8082/books
     "author": "Jose Long",
     "price": 10.0,
     "title": "Cloud-Native Java",
-    "totalPrice": 11.0
+    "totalPrice": 13.0
 }
 ```
