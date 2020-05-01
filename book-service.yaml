@@ -11,4 +11,4 @@ management:
 server:
   port: 8082
 
-tax: 10
+tax: 30
