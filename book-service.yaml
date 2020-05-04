@@ -14,5 +14,5 @@ server:
 tax: 50
 
 book:
-  title: Kubernetes Enterprise Edition
+  title: Kubernetes Enterprise Edition 2
   price: 10
