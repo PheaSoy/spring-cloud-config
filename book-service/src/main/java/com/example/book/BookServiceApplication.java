@@ -59,7 +59,7 @@ public class BookServiceApplication {
 	}
 	@Configuration
 	@ConfigurationProperties(prefix = "book")
-	@RefreshScope
+	//@RefreshScope
 	@Data
 	class BookConfig {
 		String title;
