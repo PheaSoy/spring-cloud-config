@@ -11,7 +11,7 @@ management:
 server:
   port: 8082
 
-tax: 30
+tax: 50
 
 book:
   title: OpenShift Enterprise
