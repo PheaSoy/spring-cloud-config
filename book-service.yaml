@@ -12,3 +12,7 @@ server:
   port: 8082
 
 tax: 30
+
+book:
+  title: OpenShift Enterprise
+  price: 10
